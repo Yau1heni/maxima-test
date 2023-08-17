@@ -2,10 +2,12 @@
 <html lang="ru">
 <head>
     <title>Maxima school</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="main.css">
     <meta charset="utf-8">
 </head>
 <body>
+
 <div class="container">
     <div class="header">
         <ul class="menu">
@@ -13,7 +15,14 @@
             <li><a href="#">Новости</a></li>
             <li><a href="#">О нас</a></li>
             <li><a href="#">Контакты</a></li>
+            <li><a id="create-user">Создать пользователя</a></li>
         </ul>
+    </div>
+
+    <div class="slider" id="slider">
+        <div><img src="file.jpg" alt="Слайд 1"></div>
+        <div><img src="file.jpg" alt="Слайд 2"></div>
+        <div><img src="file.jpg" alt="Слайд 3"></div>
     </div>
 
     <div class="news-container">
@@ -60,9 +69,34 @@
         </div>
     </div>
 
+    <div class="feedback-form">
+        <h2>Обратная связь</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
     <footer class="footer">
         &copy; 2023 Maxima School. Все права защищены.
     </footer>
 </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  $('#slider').slick({
+    infinite: true,
+    prevArrow: '<div class="slick-btn-own slick-prev">&#8592;</div>',
+    nextArrow: '<div class="slick-btn-own slick-next">&#8594;</div>'
+  });
+</script>
 </body>
 </html>
